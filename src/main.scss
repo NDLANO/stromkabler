@@ -1,0 +1,14 @@
+//@import '_variables.scss';
+@import "scss/vendor/normalize";
+@import "scss/vendor/html5-boilerplate";
+@import "scss/vendor/bourbon/bourbon";
+@import "scss/vendor/breakpoint/breakpoint";
+@import "scss/base/variables";
+@import "scss/base/typography";
+@import "scss/pages/protein";
+
+#app {
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+}

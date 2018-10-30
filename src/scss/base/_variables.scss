@@ -1,0 +1,77 @@
+/// COLORS ///
+
+$main-color: #20588F;
+
+$white:           #ffffff;
+$light-grey:      #F8F8F8;
+$middle-grey:     #666666;
+$grey:            #444444;
+$black:           #000000;
+
+/// NDLA colors ///
+
+$secondary-color: #507AA4;
+$third-color: #A5BCD3;
+$lightBlue: #f9fafb;
+$darkBlue: #184673;
+$red: #FE5F55;
+$green: #5CBC80;
+$yellow: #EAD854;
+$dark-grey: #444444;
+$grey1: #8A8888;
+$grey2: #E8E3E3;
+$grey3: #EFF0F2;
+$grey4: #F8F8F8;
+$blue: #20588F;
+$blueChart: #a5bcd3;
+$redChart: #FE5F55;
+
+// Roger
+$borderColor: #184673;
+$buttonBg: #a5bcd3;
+$buttonBgFocus: #ceddea;
+
+
+ /// TYPOGRAPHY ///
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+$base-font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$main-font: $base-font-family;
+$base-font-weight: 400;
+
+$base-font-size: 1.125rem;
+$base-line-height: 1.75 * $base-font-size;
+
+$heading-font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$heading-font-weight: 700;
+
+$text-color: $dark-grey;
+$link-color: $main-color;
+$link-hover-color: $main-color;
+$link-visited-color: $main-color;
+
+
+ /// BREAKPOINTS ///
+
+$small:      0px;
+$medium:   640px;
+$mediumx:  760px;
+$mediumxx:  768px;
+$large:   1024px;
+$xlarge:  1200px;
+$xxlarge: 1440px;
+
+$smallLandscape: (max-height 360px) (orientation landscape);
+$mediumLandscape: (max-height 400px) (orientation landscape);
+$largeLandscape: (max-height 440px) (orientation landscape);
+
+/// DROPSHADOWS ///
+
+$shadow-z0: none;
+$shadow-z1: 0 1px 2px 0 rgba($black,0.16),0 1px 5px 0 rgba($black,0.12);
+$shadow-z1-2: 0 2px 5px 0 rgba($black,0.16),0 2px 10px 0 rgba($black,0.12); //Original materialize.css
+$shadow-z2: 0 8px 17px 0 rgba($black,0.2),0 6px 20px 0 rgba($black,0.19);
+$shadow-z3: 0 12px 15px 0 rgba($black,0.24),0 17px 50px 0 rgba($black,0.19);
+$shadow-z4: 0 16px 28px 0 rgba($black,0.22),0 25px 55px 0 rgba($black,0.21);
+$shadow-z5: 0 27px 24px 0 rgba($black,0.2),0 40px 77px 0 rgba($black,0.22);
