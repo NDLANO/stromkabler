@@ -3,29 +3,27 @@
       .lo_mainContainer
         Header
         main
-          .container
+          .container-fluid
             .row.align-items-center
-              // sikringsskap
-              .col-12.col-sm 
-                .row
-                  .col-8.col-sm-12
-                    img(src="@/assets/sikringsskap.svg")
-                  .col-4.col-sm-12.d-block.d-sm-none
-                    div
-                      label U<sub>1</sub>
-                      select(v-model="selectedSpenning")
-                        option(value="230") 230V
-                        option(value="400") 400v
-              // kabel
-              .col-12.col-sm
-                .row
-                  .col.d-block.d-sm-none
-                    div
+            .col-12
+              //- img(src="@/assets/sk_horizontal.svg")
+              Illustration
+            .col-12
+              .row
+                .col-12.col-sm-3
+                  div
+                    label U<sub>1</sub>
+                    select(v-model="selectedSpenning")
+                      option(value="230") 230V
+                      option(value="400") 400v
+                .col-12.col-sm-6
+                  div.wire-wrapper
+                    .clear-both
                       label.float-l Ledertverrsnitt (A)
                       select.float-l(v-model="selectedTversnitt")
                         option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
                       div.float-l mm<sup>2</sup>
-                    div.clear-both
+                    .clear-both
                       label.float-l Resesistivitet (&rho;)
                       select.float-l(v-model="selectedResistivitet")
                         option(value="0.0178") Cu 0,0178
@@ -34,43 +32,80 @@
                     .clear-both
                       label Lengde (l)
                       <input v-model="lengde"> meter
-              // panelovn
-              .col-12.col-sm
-                .row
-                  .col-8.col-sm-12
-                    img(src="@/assets/panelovn.svg")
-                  .col-4.col-sm-12.d-block.d-sm-none
-                    div
-                      label Strøm (I)
-                      <input v-model="strom"> A
-            // kontroller under
-            .row.d-none.d-sm-flex
-              .col
-                div.ta-center
-                  label U<sub>1</sub>
-                  select(v-model="selectedSpenning")
-                    option(value="230") 230V
-                    option(value="400") 400v
+                .col-12.col-sm-3
+                  div
+                    label Strøm (I)
+                    <input v-model="strom"> A
 
-              .col
-                div
-                  label.float-l Ledertverrsnitt (A)
-                  select.float-l(v-model="selectedTversnitt")
-                    option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
-                  div.float-l mm<sup>2</sup>
-                div
-                  label.float-l Resesistivitet (&rho;)
-                  select.float-l(v-model="selectedResistivitet")
-                    option(value="0.0178") Cu 0,0178
-                    option(value="0.0264") Al 0,0264
-                  div.float-l &Omega;mm<sup>2</sup>/m
-                .clear-both
-                  label Lengde (l)
-                  <input v-model="lengde"> meter
-              .col
-                div.ta-center
-                  label Strøm (I)
-                  <input v-model="strom"> A
+
+            //-   // sikringsskap
+            //-   .col-12.col-sm 
+            //-     .row
+            //-       .col-8.col-sm-12
+            //-         img(src="@/assets/sikringsskap.svg")
+            //-       .col-4.col-sm-12.d-block.d-sm-none
+            //-         div
+            //-           label U<sub>1</sub>
+            //-           select(v-model="selectedSpenning")
+            //-             option(value="230") 230V
+            //-             option(value="400") 400v
+            //-   // kabel
+            //-   .col-12.col-sm
+            //-     .row
+            //-       .col.d-block.d-sm-none
+            //-         div
+            //-           label.float-l Ledertverrsnitt (A)
+            //-           select.float-l(v-model="selectedTversnitt")
+            //-             option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
+            //-           div.float-l mm<sup>2</sup>
+            //-         div.clear-both
+            //-           label.float-l Resesistivitet (&rho;)
+            //-           select.float-l(v-model="selectedResistivitet")
+            //-             option(value="0.0178") Cu 0,0178
+            //-             option(value="0.0264") Al 0,0264
+            //-           div.float-l &Omega;mm<sup>2</sup>/m
+            //-         .clear-both
+            //-           label Lengde (l)
+            //-           <input v-model="lengde"> meter
+            //-   // panelovn
+            //-   .col-12.col-sm
+            //-     .row
+            //-       .col-8.col-sm-12
+            //-         img(src="@/assets/panelovn.svg")
+            //-       .col-4.col-sm-12.d-block.d-sm-none
+            //-         div
+            //-           label Strøm (I)
+            //-           <input v-model="strom"> A
+            //- // kontroller under
+            //- .row.d-none.d-sm-flex
+            //-   .col
+            //-     div.ta-center
+            //-       label U<sub>1</sub>
+            //-       select(v-model="selectedSpenning")
+            //-         option(value="230") 230V
+            //-         option(value="400") 400v
+
+            //-   .col
+            //-     div
+            //-       label.float-l Ledertverrsnitt (A)
+            //-       select.float-l(v-model="selectedTversnitt")
+            //-         option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
+            //-       div.float-l mm<sup>2</sup>
+            //-     div
+            //-       label.float-l Resesistivitet (&rho;)
+            //-       select.float-l(v-model="selectedResistivitet")
+            //-         option(value="0.0178") Cu 0,0178
+            //-         option(value="0.0264") Al 0,0264
+            //-       div.float-l &Omega;mm<sup>2</sup>/m
+            //-     .clear-both
+            //-       label Lengde (l)
+            //-       <input v-model="lengde"> meter
+            //-   .col
+            //-     div.ta-center
+            //-       label Strøm (I)
+            //-       <input v-model="strom"> A
+
+
           //- .content-wrapper
           //-   .lo_constrainedContainer.container
           //-     .left-right.sikringsskap
@@ -104,6 +139,7 @@
 
 <script>
   import Header from './components/Header';
+  import Illustration from './components/Illustration';
 
   export default {
     name: 'App',
@@ -121,6 +157,7 @@
     },
     components: {
       Header,
+      Illustration,
     },
     methods: {
       stringToNum(stringIn) {
@@ -169,8 +206,9 @@
   //   }
   // }
 
-  .container {
+  .container-fluid {
     padding-top: 30px;
+    max-width: 1000px;
   }
 
   input {
