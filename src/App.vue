@@ -44,17 +44,17 @@
                     .calculation
                       div.upper-calculation &rho; x 2 x l x I
                       .ta-center A
-                  .float-l
+                  .float-l.ml-30
                     .row
                       .col
-                        p Utregning &Delta;U: <br>{{ u }} = ({{ selectedResistivitet }}) x 2 x {{ lengde }} x {{ strom }})/2,5
+                        p <strong>Utregning &Delta;U:</strong> <br>{{ u }} = ({{ selectedResistivitet }}) x 2 x {{ lengde }} x {{ strom }})/2,5
               .col-12
                 .formula-wrapper
                   .float-l U<sub>2</sub> = U<sub>1</sub> - &Delta;U
-                  .float-l
+                  .float-l.ml-30
                     .row
                       .col
-                        p Utregning U<sub>2</sub>: <br>{{ u2 }} = {{ selectedSpenning }} - {{ u }}
+                        p <strong>Utregning U<sub>2</sub>:</strong> <br>{{ u2 }} = {{ selectedSpenning }} - {{ u }}
 
 
           //- .content-wrapper
@@ -189,6 +189,10 @@
   // helpers
   .float-l {
     float: left;
+  }
+
+  .ml-30 {
+    margin-left: 30px;
   }
 
   .clear-both {
