@@ -55,6 +55,10 @@
                     .row
                       .col
                         p <strong>Utregning U<sub>2</sub>:</strong> <br>{{ u2 }} = {{ selectedSpenning }} - {{ u }}
+            .row
+              .col
+                // TODO: This text should be styled like a warning box
+                p {{ $t('general.warning') }}
 
 
           //- .content-wrapper
