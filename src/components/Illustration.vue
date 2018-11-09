@@ -16,7 +16,13 @@
       },
       length: {
         type: String,
-        default: '0',
+      },
+    },
+    computed: {
+      validatedLength() {
+        if (this.length === '') return '0';
+
+        return this.length;
       },
     },
   };
