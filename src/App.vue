@@ -7,7 +7,7 @@
             .row.align-items-center
               .col-12
                 //- img(src="@/assets/sk_horizontal.svg")
-                Illustration
+                Illustration(:u1="selectedSpenning" :u2="u2" :deltaU=deltaU :length="lengde")
               .col-12
                 .row
                   .col-12.col-sm-3
