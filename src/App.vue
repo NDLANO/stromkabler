@@ -7,7 +7,7 @@
             .row.align-items-center
               .col-12
                 //- img(src="@/assets/sk_horizontal.svg")
-                Illustration(:u1="selectedSpenning" :u2="u2" :deltaU=deltaU :length="lengde")
+                Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde")
               .col-12
                 .row
                   .col-12.col-sm-3
@@ -104,8 +104,8 @@
         tversnittValues: [1, 1.5, 2, 2.5, 4, 6],
         selectedResistivitet: 0.0178,
 
-        lengde: '',
-        strom: '3',
+        lengde: '1',
+        strom: '1',
         selectedSpenning: 230,
         dummyVariable: 'dummy',
       };
@@ -130,11 +130,24 @@
       deltaU() {
         const tmpLengde = this.stringToNum(this.lengde);
         const tmpStrom = this.stringToNum(this.strom);
-        console.log('tmpLengde = ' + tmpLengde + ', tmpStrom = ' + tmpStrom);
+        console.log(
+          'tmpLengde = ' +
+            tmpLengde +
+            ', tmpStrom = ' +
+            tmpStrom +
+            ', resistivitet = ' +
+            this.selectedResistivitet +
+            ', tversnitt = ' +
+            this.selectedTversnitt,
+        );
         if (tmpLengde > 0 && tmpStrom > 0) {
-          return (this.selectedResistivitet * 2 * tmpLengde * tmpStrom / this.selectedTversnitt).toFixed(3);
+          const tmpDeltaU = (this.selectedResistivitet * 2 * tmpLengde * tmpStrom / this.selectedTversnitt).toFixed(3);
+          console.log('tmpDeltaU = ' + tmpDeltaU);
+          console.log('tmpDeltaU type = ' + typeof tmpDeltaU);
+          return tmpDeltaU;
+          // return (this.selectedResistivitet * 2 * tmpLengde * tmpStrom / this.selectedTversnitt).toFixed(3);
         }
-        return 0;
+        return '0';
       },
       u2() {
         return this.selectedSpenning - this.deltaU;
