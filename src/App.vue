@@ -47,14 +47,14 @@
                   .float-l.ml-30
                     .row
                       .col
-                        p <strong>Utregning &Delta;U:</strong> <br>{{ u }} = ({{ selectedResistivitet }}) x 2 x {{ lengde }} x {{ strom }})/2,5
+                        p <strong>Utregning &Delta;U:</strong> <br>{{ deltaU }} = ({{ selectedResistivitet }}) x 2 x {{ lengde }} x {{ strom }})/2,5
               .col-12
                 .formula-wrapper
                   .float-l U<sub>2</sub> = U<sub>1</sub> - &Delta;U
                   .float-l.ml-30
                     .row
                       .col
-                        p <strong>Utregning U<sub>2</sub>:</strong> <br>{{ u2 }} = {{ selectedSpenning }} - {{ u }}
+                        p <strong>Utregning U<sub>2</sub>:</strong> <br>{{ u2 }} = {{ selectedSpenning }} - {{ deltaU }}
             .row
               .col
                 // TODO: This text should be styled like a warning box
@@ -127,7 +127,7 @@
       },
     },
     computed: {
-      u() {
+      deltaU() {
         const tmpLengde = this.stringToNum(this.lengde);
         const tmpStrom = this.stringToNum(this.strom);
         console.log('tmpLengde = ' + tmpLengde + ', tmpStrom = ' + tmpStrom);
@@ -137,7 +137,7 @@
         return 0;
       },
       u2() {
-        return this.selectedSpenning - this.u;
+        return this.selectedSpenning - this.deltaU;
       },
     },
     watch: {},
