@@ -12,8 +12,7 @@
         default: 230,
       },
       deltaU: {
-        type: Number,
-        default: 0,
+        type: String,
       },
       length: {
         type: String,
