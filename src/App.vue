@@ -56,8 +56,9 @@
                 div.col 
                   div.m-center <strong>Forbruker</strong>
                     div
-                      label Strøm (I)
-                      <input v-model="strom" dir="rtl" type="number" min="1" maxlength="2" max="99" step="1"> A
+                      label.float-l Strøm (I)
+                      <InputNumber class="float-l" v-model="strom" dir="rtl" type="number" min="1" maxlength="2" max="99" step="1"/>
+                      .float-l A
               .formulas.clear-both
                 p formula
               .warning
