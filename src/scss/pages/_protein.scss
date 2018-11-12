@@ -1,22 +1,22 @@
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-img{
-	width: 100%;
-	height: auto;
+img {
+  width: 100%;
+  height: auto;
 }
 
 // Containers
 
-.lo_mainContainer{
-	width: 100%;
-	min-height: 100vh;
+.lo_mainContainer {
+  width: 100%;
+  min-height: 100vh;
 }
 
-.lo_contentArea_top{
-	flex: 1;
-	align-self: center;
+.lo_contentArea_top {
+  flex: 1;
+  align-self: center;
 }
 
 main {
@@ -29,180 +29,181 @@ main {
 }
 
 .content-wrapper {
-	width: 100%;
-	margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
 
-.lo_constrainedContainer{
-	max-width: 52rem;
-	margin: 0 auto;
-	padding: $base-line-height/8 $base-line-height/2;
-	@include breakpoint($large){
-		padding: 0 $base-line-height;
-	}
+.content-wrapper-inner {
+  margin: 0 30px;
 }
 
-.lo_teori{
-	max-width: $base-line-height*22;
-	margin: 0 auto;
-	padding: $base-line-height/8 $base-line-height;
+.lo_constrainedContainer {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: $base-line-height/8 $base-line-height/2;
+  @include breakpoint($large) {
+    padding: 0 $base-line-height;
+  }
 }
 
-.lo_equipment{
-	width: 100%;
-	@include breakpoint($large){
-		padding: 0 $base-line-height 0 $base-line-height;
-	}
+.lo_teori {
+  max-width: $base-line-height * 22;
+  margin: 0 auto;
+  padding: $base-line-height/8 $base-line-height;
 }
 
-.lo_buttonBlock{
-	display: flex;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.lo_equipment {
+  width: 100%;
+  @include breakpoint($large) {
+    padding: 0 $base-line-height 0 $base-line-height;
+  }
 }
 
-footer{
-	display: flex;
-	position: relative;
-	background: $lightBlue;
-	min-height: $base-line-height*12;
-	padding-bottom: $base-line-height*2;
-	z-index: 1;
+.lo_buttonBlock {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.lo_flexContainer{
-	display: flex;
-	text-align: left;
-	align-items: center;
-	@include breakpoint($large){
-		text-align: center;
-		justify-content: center;
-	}
+footer {
+  display: flex;
+  position: relative;
+  background: $lightBlue;
+  min-height: $base-line-height * 12;
+  padding-bottom: $base-line-height * 2;
+  z-index: 1;
 }
 
-.lo_fullBackground{
-	@include breakpoint($medium){
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		height: 100%;
-		background-size: cover;
-	}
+.lo_flexContainer {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  @include breakpoint($large) {
+    text-align: center;
+    justify-content: center;
+  }
 }
 
-
-
+.lo_fullBackground {
+  @include breakpoint($medium) {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+  }
+}
 
 // START PAGE
 
-.lo_startBlock{
-	background: $white;
-	align-self: flex-start;
-	min-height: $base-line-height;
-	position: relative;
-	max-width: $base-line-height*20;
-	padding: $base-line-height/4 $base-line-height/2;
-	border-radius: $base-line-height/8;
-	@include breakpoint($medium){
-		padding: 0 $base-line-height $base-line-height/2 $base-line-height;
-		box-shadow: $shadow-z3;
-		margin-top: $base-line-height;
-	}
-	@include breakpoint($large){
-		margin-top: $base-line-height*3;
-	}
-	@include breakpoint($xlarge){
-		margin-top: $base-line-height*4;
-	}
+.lo_startBlock {
+  background: $white;
+  align-self: flex-start;
+  min-height: $base-line-height;
+  position: relative;
+  max-width: $base-line-height * 20;
+  padding: $base-line-height/4 $base-line-height/2;
+  border-radius: $base-line-height/8;
+  @include breakpoint($medium) {
+    padding: 0 $base-line-height $base-line-height/2 $base-line-height;
+    box-shadow: $shadow-z3;
+    margin-top: $base-line-height;
+  }
+  @include breakpoint($large) {
+    margin-top: $base-line-height * 3;
+  }
+  @include breakpoint($xlarge) {
+    margin-top: $base-line-height * 4;
+  }
 }
 
-.lo_startBlock h1{
-	border-bottom: $base-line-height/8 solid $main-color;
-	padding-bottom: $base-line-height/2; 
+.lo_startBlock h1 {
+  border-bottom: $base-line-height/8 solid $main-color;
+  padding-bottom: $base-line-height/2;
 }
 
 // HEADER
 
-header{
-	background: $darkBlue;
-	display: flex;
-	align-items: center;
-	padding: $base-line-height/2;
+header {
+  background: $darkBlue;
+  display: flex;
+  align-items: center;
+  padding: $base-line-height/2;
 }
 
-.header_title{
-	padding: 0 $base-line-height/2;
-	color: white;
-	margin: 0;
-	line-height: $base-line-height;
-	flex-grow: 1;
+.header_title {
+  padding: 0 $base-line-height/2;
+  color: white;
+  margin: 0;
+  line-height: $base-line-height;
+  flex-grow: 1;
 }
-
-
 
 /// NAVIGATION
 
-nav{
-	display: flex;
-	flex-direction: column;
-	background: $white;
-	width: 100%;
-	box-shadow: $shadow-z2;
-	flex-shrink: 0;
-	@include breakpoint($large){
-		width: $base-line-height*5;
-	}
-	@include breakpoint($xxlarge){
-		min-height: 40rem;
-		width: $base-line-height*8;
-	}
+nav {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  width: 100%;
+  box-shadow: $shadow-z2;
+  flex-shrink: 0;
+  @include breakpoint($large) {
+    width: $base-line-height * 5;
+  }
+  @include breakpoint($xxlarge) {
+    min-height: 40rem;
+    width: $base-line-height * 8;
+  }
 }
 
-nav ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display:flex;
-	flex-direction: column;
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
-nav li{
-	flex-grow: 1;
-	border-top: 1px solid tint($middle-grey, 80%);
+nav li {
+  flex-grow: 1;
+  border-top: 1px solid tint($middle-grey, 80%);
 }
 
 nav ul button,
-nav a{
-	display: block;
-	width: 100%;
-	background: none;
-	font-weight: bold;
-	padding: $base-line-height/2 0;
-	text-decoration: none;
-	@include breakpoint($large){
-		padding: $base-line-height 0;
-	}
-	@include breakpoint($xxlarge){
-		font-size: 1.1rem;
-	}
+nav a {
+  display: block;
+  width: 100%;
+  background: none;
+  font-weight: bold;
+  padding: $base-line-height/2 0;
+  text-decoration: none;
+  @include breakpoint($large) {
+    padding: $base-line-height 0;
+  }
+  @include breakpoint($xxlarge) {
+    font-size: 1.1rem;
+  }
 }
 
 nav button span,
-nav a span{
-	color: $blue;
-	font-size: .75rem;
-	text-transform: uppercase;
-	line-height: 0;
+nav a span {
+  color: $blue;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 0;
 }
 
-nav button span:after{
-	content: '\A';
-	white-space: pre;
+nav button span:after {
+  content: '\A';
+  white-space: pre;
 }
 
 nav button:hover,
@@ -210,192 +211,189 @@ nav button:hover,
 nav a:hover,
 // nav a:focus,
 nav a.active {
-	background: shade($darkBlue,20%);
-	background: $grey3;
-	border-color: $grey1;
-	border-color: $third-color;
+  background: shade($darkBlue, 20%);
+  background: $grey3;
+  border-color: $grey1;
+  border-color: $third-color;
 }
 
-.navButton_icon{
-	width: $base-line-height/2;
-	height: $base-line-height/2;
-	margin-left: $base-line-height/2;
+.navButton_icon {
+  width: $base-line-height/2;
+  height: $base-line-height/2;
+  margin-left: $base-line-height/2;
 }
 
-.navButton_icon svg{
-	fill: $main-color;
-	padding: 0 $base-line-height/2;
+.navButton_icon svg {
+  fill: $main-color;
+  padding: 0 $base-line-height/2;
 }
 
-.navButton_text{
-	flex-grow: 1;
-	padding-left: $base-line-height/2;
-	@include breakpoint($large){
-		padding-left: $base-line-height;
-	}
+.navButton_text {
+  flex-grow: 1;
+  padding-left: $base-line-height/2;
+  @include breakpoint($large) {
+    padding-left: $base-line-height;
+  }
 }
 
-nav .icon{
-	padding-right: $base-line-height/4;
+nav .icon {
+  padding-right: $base-line-height/4;
 }
 
 /// FOOTER
 
 .footer_default,
 .footer_info,
-.footer_results{
-	// width: $base-line-height*22;
-	margin: 0 auto;
-	padding: 0 $base-line-height/2;
+.footer_results {
+  // width: $base-line-height*22;
+  margin: 0 auto;
+  padding: 0 $base-line-height/2;
 }
 
-.footer_info{
-	background: white;
-	border-radius: $base-line-height/8;
-	margin-top: $base-line-height;
-	box-shadow: $shadow-z1;
-	display: flex;
-	padding: 0;
+.footer_info {
+  background: white;
+  border-radius: $base-line-height/8;
+  margin-top: $base-line-height;
+  box-shadow: $shadow-z1;
+  display: flex;
+  padding: 0;
 }
 
-.footer_info_side{
-	width: $base-line-height*8;
-	background: $green;
-	display: flex;
-	justify-content: center;
-	border-top-left-radius: $base-line-height/8;
-	border-bottom-left-radius: $base-line-height/8;
+.footer_info_side {
+  width: $base-line-height * 8;
+  background: $green;
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: $base-line-height/8;
+  border-bottom-left-radius: $base-line-height/8;
 }
 
 .footer_info_side img,
-.footer_info_side svg{
-	width: $base-line-height*2;
-	height: $base-line-height*2;
-	margin-top: $base-line-height/2;
+.footer_info_side svg {
+  width: $base-line-height * 2;
+  height: $base-line-height * 2;
+  margin-top: $base-line-height/2;
 }
 
-.footer_info_content{
-	padding: 0 $base-line-height;
+.footer_info_content {
+  padding: 0 $base-line-height;
 }
-
 
 // BUTTON
 
 .btn-main,
-.btn-outline{
-	min-width: 7rem;
-	color: white;
-	background-color: $blue;
-	border: 3px solid $blue;
-	border-radius: 4px;
-	padding: 0 $base-line-height/2;
-	margin: $base-line-height/4 0;
-	line-height: $base-line-height;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: bold;
-	transition: all 0.2s cubic-bezier(0.17, 0.04, 0.03, 0.94);
-	@include breakpoint($medium){
-		line-height: $base-line-height*1.25;
-	}
-	@include breakpoint($xxlarge){
-		margin: $base-line-height/4 0;
-	}
+.btn-outline {
+  min-width: 7rem;
+  color: white;
+  background-color: $blue;
+  border: 3px solid $blue;
+  border-radius: 4px;
+  padding: 0 $base-line-height/2;
+  margin: $base-line-height/4 0;
+  line-height: $base-line-height;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  @include breakpoint($medium) {
+    line-height: $base-line-height * 1.25;
+  }
+  @include breakpoint($xxlarge) {
+    margin: $base-line-height/4 0;
+  }
 }
 
-.btn-main{
-	box-shadow: $shadow-z1;
+.btn-main {
+  box-shadow: $shadow-z1;
 }
 
-.button-wrapper .btn-main{
-	width: 100%;
-	@include breakpoint($medium){
-		width: auto;
-	}
+.button-wrapper .btn-main {
+  width: 100%;
+  @include breakpoint($medium) {
+    width: auto;
+  }
 }
 
 .btn-main:hover,
 .btn-main:focus,
 .btn-outline:hover,
-.btn-outline:focus{
-	color: $white;
-	background: tint($blue, 10%);
-	box-shadow: $shadow-z2;
+.btn-outline:focus {
+  color: $white;
+  background: tint($blue, 10%);
+  box-shadow: $shadow-z2;
 }
 
 .btn-main:focus,
-.btn-outline:focus{
-	border-color: black;
+.btn-outline:focus {
+  border-color: black;
 }
 
-.btn-outline{
-	background: white;
-	color: $blue;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 12rem;
-	margin: $base-line-height/4;
+.btn-outline {
+  background: white;
+  color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12rem;
+  margin: $base-line-height/4;
 }
 
-.lo_sideBar .lo_buttonBlock{
-	justify-content: space-around;
-	flex-wrap: wrap;
+.lo_sideBar .lo_buttonBlock {
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .btn-outline:hover .iconButton,
-.btn-outline:focus .iconButton{
-	fill: white;
+.btn-outline:focus .iconButton {
+  fill: white;
 }
 
-.iconButton{
-	fill: $blue;
-	margin-right: $base-line-height/6;
-	flex-shrink: 0;
+.iconButton {
+  fill: $blue;
+  margin-right: $base-line-height/6;
+  flex-shrink: 0;
 }
-
 
 /// ICON BUTTONS
 
 .btn-menu,
 .btn-instructions,
-.btn-close{
-	line-height: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: none;
-	width: $base-line-height*1;
-	height: $base-line-height*1;
-	border: 0;
+.btn-close {
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  width: $base-line-height * 1;
+  height: $base-line-height * 1;
+  border: 0;
 }
 
-.btn-close{
-	align-self: flex-end;
-	margin: $base-line-height/2;
+.btn-close {
+  align-self: flex-end;
+  margin: $base-line-height/2;
 }
 
 .btn-menu svg,
-.btn-instructions svg{
-	fill: $white;
+.btn-instructions svg {
+  fill: $white;
 }
 
 .btn-close,
-.btn-menu, {
-	@include breakpoint($large){
-		display: none;
-	}
+.btn-menu {
+  @include breakpoint($large) {
+    display: none;
+  }
 }
 
 nav {
-	&.nav-hidden {
-		display: none;
-			@include breakpoint($large) {
-				display: flex;
-			}
-		}
-
-	}
+  &.nav-hidden {
+    display: none;
+    @include breakpoint($large) {
+      display: flex;
+    }
+  }
+}
 
 .btn-menu:hover,
 .btn-menu:focus,
@@ -404,99 +402,98 @@ nav {
 .btn-instructions:hover,
 .btn-instructions:focus,
 .btn-instructions:hover svg,
-.btn-instructions:focus svg{
-	background: $white;
-	fill: $main-color;
+.btn-instructions:focus svg {
+  background: $white;
+  fill: $main-color;
 }
-
 
 // EQUIPMENT
 
-.equipmentList{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-wrap: wrap;
+.equipmentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.equipmentItem{
-	margin: $base-line-height/4;
-	width: $base-line-height*4;
-	background: white;
-	box-shadow: $shadow-z1-2;
-	@include breakpoint($medium){
-		width: $base-line-height*6;
-	}
-	@include breakpoint($large){
-		width: $base-line-height*6;
-	}
-	@include breakpoint($xxlarge){
-		width: $base-line-height*7;
-	}
+.equipmentItem {
+  margin: $base-line-height/4;
+  width: $base-line-height * 4;
+  background: white;
+  box-shadow: $shadow-z1-2;
+  @include breakpoint($medium) {
+    width: $base-line-height * 6;
+  }
+  @include breakpoint($large) {
+    width: $base-line-height * 6;
+  }
+  @include breakpoint($xxlarge) {
+    width: $base-line-height * 7;
+  }
 }
 
 .equipmentItem_visual img,
-.equipmentItem_visual svg{
-	width: 100%;
-	height: auto;
+.equipmentItem_visual svg {
+  width: 100%;
+  height: auto;
 }
 
-.equipmentItem_text{
-	padding: $base-line-height/8;
-	margin-bottom: $base-line-height/8;
-	text-align: center;
-	font-size: .75rem;
-	@include breakpoint($large){
-		font-size: 1rem;
-	}
+.equipmentItem_text {
+  padding: $base-line-height/8;
+  margin-bottom: $base-line-height/8;
+  text-align: center;
+  font-size: 0.75rem;
+  @include breakpoint($large) {
+    font-size: 1rem;
+  }
 }
 
 /// RESULTS
 
-.results{
-	padding: $base-line-height/4 $base-line-height/4;
-	display: flex;
-	color: $darkBlue;
-	font-size: 1.5rem;
-	font-weight: bold;
-	background: $white;
+.results {
+  padding: $base-line-height/4 $base-line-height/4;
+  display: flex;
+  color: $darkBlue;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: $white;
 }
 
-.results_text{
-	margin-right: $base-line-height;
-	margin-top: 0;
-	margin-bottom: 0;
-	color: $dark-grey;
+.results_text {
+  margin-right: $base-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $dark-grey;
 }
 
-.results_list{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
+.results_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.results_list li{
-	display: flex;
-	margin-right: $base-line-height;
+.results_list li {
+  display: flex;
+  margin-right: $base-line-height;
 }
 
-.results_list_value{
-	margin-right: $base-line-height/4;
+.results_list_value {
+  margin-right: $base-line-height/4;
 }
 
-.footer_results input{
-	margin: 0 $base-line-height/4;
+.footer_results input {
+  margin: 0 $base-line-height/4;
 }
 
-.radioBlock{
-	display: flex;
-	padding: $base-line-height/8 0;
+.radioBlock {
+  display: flex;
+  padding: $base-line-height/8 0;
 }
 
-.radioBlock_radioButtons label{
-	margin-right: $base-line-height/2;
+.radioBlock_radioButtons label {
+  margin-right: $base-line-height/2;
 }
 
 .radioBlock input {
@@ -520,302 +517,296 @@ nav {
   border: 6px solid $main-color;
 }
 
-.testInputStyle{
-	text-align: center;
-	width: $base-line-height*1.75;
-	border-radius: $base-line-height/4;
-	border: 1px solid $grey1;
-	height: 2rem;
-	font-weight: 600;
+.testInputStyle {
+  text-align: center;
+  width: $base-line-height * 1.75;
+  border-radius: $base-line-height/4;
+  border: 1px solid $grey1;
+  height: 2rem;
+  font-weight: 600;
 }
-
 
 /// Project2
 
-.lo_navExperiment{
-	display: flex;
-	list-style: none;
-	padding-left: 0;
-	flex-wrap: wrap;
-	width: 100%;
-	//min-height: $base-line-height*6;
-	@include breakpoint($large){
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
+.lo_navExperiment {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+  width: 100%;
+  //min-height: $base-line-height*6;
+  @include breakpoint($large) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .lo_navExperiment li:nth-child(1) {
-	width: 100%;
-	flex-grow: 1;
-	text-align: center;
-	@include breakpoint($large){
-		order: 2;
-		width: auto;
-		padding: 0 $base-line-height;
-	}
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  @include breakpoint($large) {
+    order: 2;
+    width: auto;
+    padding: 0 $base-line-height;
+  }
 }
 
 .lo_navExperiment li:nth-child(2) {
-	width: 50%;
-	@include breakpoint($large){
-		order: 1;
-		width: auto;
-	}	
+  width: 50%;
+  @include breakpoint($large) {
+    order: 1;
+    width: auto;
+  }
 }
 
 .lo_navExperiment li:nth-child(3) {
-	width: 50%;
-	@include breakpoint($large){
-		width: auto;
-		order: 3;
-	}	
+  width: 50%;
+  @include breakpoint($large) {
+    width: auto;
+    order: 3;
+  }
 }
 
-.btn_navPrevNext{
-	padding: 0;
-	background: transparent;
-	border: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: $base-line-height/4;
-	width: 100%;
+.btn_navPrevNext {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $base-line-height/4;
+  width: 100%;
 }
 
-.btn_navPrevNext svg{
-	fill: $third-color;
+.btn_navPrevNext svg {
+  fill: $third-color;
 }
 
-.btn_navPrevNext:hover svg{
-	fill: $white;
+.btn_navPrevNext:hover svg {
+  fill: $white;
 }
 
-.btn_navPrevNext:hover{
-	background: $main-color;
+.btn_navPrevNext:hover {
+  background: $main-color;
 }
-
 
 // ANIM
-.lo_lab{
-	width: 100%;
-	@include breakpoint($large){
-		max-width: 62rem;
-		margin: 0 auto;
-	}
+.lo_lab {
+  width: 100%;
+  @include breakpoint($large) {
+    max-width: 62rem;
+    margin: 0 auto;
+  }
 }
 
-.anim{
-	position: relative;
-
+.anim {
+  position: relative;
 }
 
-.anim svg{
-	@include breakpoint($large){
-		min-height: 24rem; // IE11 svg sizing bug fix
-	}
-	@include breakpoint($xxlarge){
-		min-height: 32rem; // IE11 svg sizing bug fix
-	}
+.anim svg {
+  @include breakpoint($large) {
+    min-height: 24rem; // IE11 svg sizing bug fix
+  }
+  @include breakpoint($xxlarge) {
+    min-height: 32rem; // IE11 svg sizing bug fix
+  }
 }
 
-.anim .btn-outline{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 0;
-	padding:0;
-	min-width: $base-line-height*3;			
+.anim .btn-outline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  min-width: $base-line-height * 3;
 }
-
 
 // TEST PAGE
 
 .lo_testcontent-wrapper {
-	display: block;
-	@include breakpoint($medium){
-		display: flex;
-	}
+  display: block;
+  @include breakpoint($medium) {
+    display: flex;
+  }
 }
 
 .test-illustration {
   width: 100%;
-	position: relative;
+  position: relative;
 }
 
 .test-illustration:first-child {
-	@include breakpoint($medium){
-		border-right: 1px solid $middle-grey;
-	}
+  @include breakpoint($medium) {
+    border-right: 1px solid $middle-grey;
+  }
 }
 
 .lo_testcontent-wrapper svg,
-.test-illustration{
-	min-height: 10rem;
-	@include breakpoint($large){
-		min-height: 30rem;
-	}	
+.test-illustration {
+  min-height: 10rem;
+  @include breakpoint($large) {
+    min-height: 30rem;
+  }
 }
 
 h1.test-alternative-heading {
-	position: absolute;
-	margin-left: 15px;
-	margin-top: -5px;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: -5px;
 }
 
-.lo_tip{
-	background: $yellow;
-	padding: $base-line-height/4 $base-line-height/2;
-	border-radius: $base-line-height/4;
-	margin-top: $base-line-height/4;
+.lo_tip {
+  background: $yellow;
+  padding: $base-line-height/4 $base-line-height/2;
+  border-radius: $base-line-height/4;
+  margin-top: $base-line-height/4;
 }
 
-.lo_tip p{
-	margin: 0;
-	color: $black;
-	font-weight: 600;
+.lo_tip p {
+  margin: 0;
+  color: $black;
+  font-weight: 600;
 }
-
 
 /// TABLES
 
-.lo_tableBlock{
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+.lo_tableBlock {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.tableBlock:first-of-type{
-	margin-bottom: $base-line-height/2;
-	@include breakpoint($medium){
-		margin-right: $base-line-height*1;
-	}
-	@include breakpoint($xxlarge){
-		margin-right: $base-line-height*1.5;
-	}
+.tableBlock:first-of-type {
+  margin-bottom: $base-line-height/2;
+  @include breakpoint($medium) {
+    margin-right: $base-line-height * 1;
+  }
+  @include breakpoint($xxlarge) {
+    margin-right: $base-line-height * 1.5;
+  }
 }
 
-table{
-	table-layout: fixed;
-	white-space: nowrap;
-	width: 100%;
-	background: white;
-	border-radius: $base-line-height/4;
-	box-shadow: $shadow-z1;
+table {
+  table-layout: fixed;
+  white-space: nowrap;
+  width: 100%;
+  background: white;
+  border-radius: $base-line-height/4;
+  box-shadow: $shadow-z1;
 }
 
 td:first-child,
-thead th{
-	font-weight: bold;
+thead th {
+  font-weight: bold;
 }
 
-thead th{
-	border-bottom: 3px solid $blueChart;
+thead th {
+  border-bottom: 3px solid $blueChart;
 }
 
-table tr:nth-child(2n) td{
-	background: $lightBlue;
+table tr:nth-child(2n) td {
+  background: $lightBlue;
 }
 
 td,
-th{
-	text-align: center;
-	font-weight: normal;
-	@include breakpoint($medium){
-		padding: $base-line-height/8 $base-line-height/10;
-	}
-	@include breakpoint($xxlarge){
-		padding: $base-line-height/2.5 $base-line-height/4;
-	}
+th {
+  text-align: center;
+  font-weight: normal;
+  @include breakpoint($medium) {
+    padding: $base-line-height/8 $base-line-height/10;
+  }
+  @include breakpoint($xxlarge) {
+    padding: $base-line-height/2.5 $base-line-height/4;
+  }
 }
 
-thead{
-	text-transform: uppercase;
-	line-height: $base-line-height;
+thead {
+  text-transform: uppercase;
+  line-height: $base-line-height;
 }
 
-.table_cellContent{
-	justify-content: center;
-	align-items: center;
-	display: flex;
+.table_cellContent {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .correctAnswer,
-.wrongAnswer{
-	width: 3rem;
-	color: white;
-	font-weight: bold;
-	font-size: .75rem;
-	height: 100%;
-	border-radius: $base-line-height;
-	padding: $base-line-height/16 $base-line-height/4;
-	margin-left: $base-line-height/4;
+.wrongAnswer {
+  width: 3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  height: 100%;
+  border-radius: $base-line-height;
+  padding: $base-line-height/16 $base-line-height/4;
+  margin-left: $base-line-height/4;
 }
 
-.correctAnswer{
-	background: #00AA55;
+.correctAnswer {
+  background: #00aa55;
 }
-.wrongAnswer{
-	background: #DC2A2A;
-}
-
-table svg{
-	stroke-width: 3;
-	stroke: $dark-grey;
+.wrongAnswer {
+  background: #dc2a2a;
 }
 
+table svg {
+  stroke-width: 3;
+  stroke: $dark-grey;
+}
 
 // ELEMENT CHECKBOX OVERRIDES
 
-.checkbox-wrapper{
-	margin-bottom: $base-line-height/2;
-	//width: 100%;
-	//text-align: left;
+.checkbox-wrapper {
+  margin-bottom: $base-line-height/2;
+  //width: 100%;
+  //text-align: left;
 }
 
-.el-checkbox{
-	width: 100%;
-	@include breakpoint($medium){
-		width: auto;
-	}
+.el-checkbox {
+  width: 100%;
+  @include breakpoint($medium) {
+    width: auto;
+  }
 }
-.el-checkbox+.el-checkbox{
-	margin-top: $base-line-height/2;
-	margin-left: 0;
-	@include breakpoint($medium){
-		margin-left: $base-line-height;
-		margin-top: 0;
-	}
+.el-checkbox + .el-checkbox {
+  margin-top: $base-line-height/2;
+  margin-left: 0;
+  @include breakpoint($medium) {
+    margin-left: $base-line-height;
+    margin-top: 0;
+  }
 }
 
-.el-checkbox__label{
+.el-checkbox__label {
   color: $text-color;
   font-size: 0.88rem;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   line-height: 1.5;
-  @include breakpoint($large){
+  @include breakpoint($large) {
     font-size: 1rem;
   }
 }
 
-.el-checkbox__input.is-checked+.el-checkbox__label{
-	color: $main-color;
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: $main-color;
 }
 
 .el-checkbox__input.is-checked .el-checkbox__inner,
-.el-checkbox__input.is-indeterminate .el-checkbox__inner{
-	background-color: $main-color;
-	border-color: $main-color;
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: $main-color;
+  border-color: $main-color;
 }
 
-.el-checkbox__inner{
-	border: 2px solid $main-color;
-	width: $base-line-height/2;
-	height: $base-line-height/2;
+.el-checkbox__inner {
+  border: 2px solid $main-color;
+  width: $base-line-height/2;
+  height: $base-line-height/2;
 }
 
-.el-checkbox__inner::after{
-	border-width: 2px;
-	left: 4px;
+.el-checkbox__inner::after {
+  border-width: 2px;
+  left: 4px;
 }
