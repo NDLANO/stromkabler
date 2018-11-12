@@ -3,11 +3,49 @@
       .lo_mainContainer
         Header
         main
-          .container-fluid
+          .content-wrapper
+            .content-wrapper-inner
+              Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde")
+              .controls
+                div.col 
+                  div <strong>Strømkilde</strong>
+                    div
+                      label U<sub>1</sub>
+                      select(v-model="selectedSpenning")
+                        option(value="230") 230V
+                        option(value="400") 400v
+                div.col 
+                  div <strong>Kabel</strong>
+                    .clearfix
+                      label.float-l Ledertverrsnitt (A)
+                      select.float-l(v-model="selectedTversnitt")
+                        option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
+                      div.float-l.pl-5 mm<sup>2</sup>
+                    .clearfix
+                      label.float-l Resesistivitet (&rho;)
+                      select.float-l(v-model="selectedResistivitet")
+                        option(value="0.0178") Cu 0,0178
+                        option(value="0.0264") Al 0,0264
+                      div.float-l.pl-5 &Omega;mm<sup>2</sup>/m
+                    .clearfix
+                      label Lengde (l)
+                      <input v-model="lengde"> meter
+                div.col 
+                  div <strong>Forbruker</strong>
+                    div
+                      label Strøm (I)
+                      <input v-model="strom"> A
+
+              .formulas.clear-both
+                p formula
+              .warning
+                p warning
+      //-   main
+          Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde")
+          //- .container-fluid
             .row.align-items-center
               .col-12
                 //- img(src="@/assets/sk_horizontal.svg")
-                Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde")
               .col-12
                 .row
                   .col-12.col-sm-3
@@ -174,51 +212,82 @@
   //   }
   // }
 
-  @import './scss/base/variables';
+  @import './main';
 
-  .container-fluid {
-    padding-top: 30px;
-    max-width: 1000px;
-  }
+  // .container-fluid {
+  //   padding-top: 30px;
+  //   max-width: 1000px;
+  // }
 
-  input {
-    width: 2em;
-    text-align: center;
-  }
+  // input {
+  //   width: 2em;
+  //   text-align: center;
+  // }
 
-  .formula-wrapper {
-    display: flex;
-    & > div {
-      align-self: center;
-      // background-color: red;
+  // .formula-wrapper {
+  //   display: flex;
+  //   & > div {
+  //     align-self: center;
+  //     // background-color: red;
+  //   }
+
+  //   .calculation {
+  //     padding-left: 10px;
+  //   }
+  //   .upper-calculation {
+  //     border-bottom: 2px solid $dark-grey;
+  //     padding-left: 5px;
+  //     padding-right: 5px;
+  //   }
+  // }
+
+  div.controls {
+    // display: flex;
+    // .col {
+    //   float: left;
+    // }
+
+    label {
+      padding-right: 10px;
     }
 
-    .calculation {
-      padding-left: 10px;
+    select {
+      font-size: 15px;
+      // padding-right: 10px;
     }
-    .upper-calculation {
-      border-bottom: 2px solid $dark-grey;
-      padding-left: 5px;
-      padding-right: 5px;
+
+    input {
+      width: 2.3rem;
+      text-align: center;
+    }
+
+    @include breakpoint($large) {
+      display: flex;
+      align-items: stretch;
+    }
+
+    & > .col {
+      width: 100%;
+      height: 100%;
+
+      @include breakpoint($large) {
+        &:nth-child(1) {
+          width: 27%;
+          // background-color: #f00;
+        }
+        &:nth-child(2) {
+          width: 33%;
+          // background-color: #0f0;
+        }
+        &:nth-child(3) {
+          // (style="width: 33.8%; background-color: green;")
+          width: 39.1%;
+          // background-color: #00f;
+        }
+      }
     }
   }
 
-  // helpers
-  .float-l {
-    float: left;
-  }
-
-  .ml-30 {
-    margin-left: 30px;
-  }
-
-  .clear-both {
-    clear: both;
-  }
-
-  .ta-center {
-    text-align: center;
-  }
   // .sikringsskap {
   //   float: left;
   //   text-align: center;
