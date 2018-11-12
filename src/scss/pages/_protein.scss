@@ -19,13 +19,13 @@ img{
 	align-self: center;
 }
 
-main{
-	background: #eeeeee;
-	min-height: calc(100vh - 70px);
-	@include breakpoint($large){
-		display: flex;
-		flex: 1;
-	}
+main {
+  background: #eeeeee;
+  min-height: calc(100vh - 70px);
+  // @include breakpoint($large){
+  // 	display: flex;
+  // 	flex: 1;
+  // }
 }
 
 .content-wrapper {
