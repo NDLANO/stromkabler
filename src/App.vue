@@ -8,14 +8,37 @@
               Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde")
               .controls
                 div.col 
-                  div <strong>Strømkilde</strong>
+                  div.m-center <strong>Strømkilde</strong>
                     div
                       label U<sub>1</sub>
-                      select(v-model="selectedSpenning")
+                      select(v-model="selectedSpenning" dir="rtl")
                         option(value="230") 230V
                         option(value="400") 400v
-                div.col 
+                div.col
                   div <strong>Kabel</strong>
+                  table
+                    tr
+                      td 
+                        label.float-l Ledertverrsnitt (A)
+                      td
+                        select.float-l(v-model="selectedTversnitt" dir="rtl")
+                          option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
+                        div.float-l.pl-5 mm<sup>2</sup>
+                    tr
+                      td
+                        label.float-l Resesistivitet (&rho;)
+                      td
+                        select.float-l(v-model="selectedResistivitet" dir="rtl")
+                          option(value="0.0178") Cu 0,0178
+                          option(value="0.0264") Al 0,0264
+                        div.float-l.pl-5 &Omega;mm<sup>2</sup>/m
+                    tr
+                      td
+                        label Lengde (l)
+                      td
+                        <input class="float-l" v-model="lengde" type="number" min="1" maxlength="2" max="99" step="1"> 
+                        div.float-l meter
+                  //- div <strong>Kabel</strong>
                     .clearfix
                       label.float-l Ledertverrsnitt (A)
                       select.float-l(v-model="selectedTversnitt")
@@ -31,10 +54,10 @@
                       label Lengde (l)
                       <input v-model="lengde" type="number" min="1" maxlength="2" max="99" step="1"> meter
                 div.col 
-                  div <strong>Forbruker</strong>
+                  div.m-center <strong>Forbruker</strong>
                     div
                       label Strøm (I)
-                      <input v-model="strom" type="number" min="1" maxlength="2" max="99" step="1"> A
+                      <input v-model="strom" dir="rtl" type="number" min="1" maxlength="2" max="99" step="1"> A
               .formulas.clear-both
                 p formula
               .warning
@@ -133,9 +156,13 @@
       font-size: 15px;
       // padding-right: 10px;
     }
+    select,
+    input {
+      width: 5.5rem;
+    }
 
     input {
-      width: 3.5rem;
+      // width: 3.5rem;
       text-align: center;
     }
 
@@ -154,18 +181,21 @@
           // background-color: #f00;
         }
         &:nth-child(2) {
-          width: 33%;
+          width: 35%;
           // background-color: #0f0;
         }
         &:nth-child(3) {
           // (style="width: 33.8%; background-color: green;")
-          width: 39.1%;
+          width: 35.1%;
           // background-color: #00f;
         }
       }
     }
   }
 
+  td {
+    vertical-align: bottom;
+  }
   // .sikringsskap {
   //   float: left;
   //   text-align: center;
