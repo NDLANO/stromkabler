@@ -116,6 +116,13 @@
 
   @import './main';
 
+  select {
+    // display: block;
+    // width: 15.75rem;
+    // padding: 1.49219rem;
+    margin-bottom: 10px;
+    margin-top: 2px;
+  }
 
   div.controls {
     label {
@@ -128,7 +135,7 @@
     }
 
     input {
-      width: 2.3rem;
+      width: 3.5rem;
       text-align: center;
     }
 
