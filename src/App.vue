@@ -29,13 +29,12 @@
                       div.float-l.pl-5 &Omega;mm<sup>2</sup>/m
                     .clearfix
                       label Lengde (l)
-                      <input v-model="lengde"> meter
+                      <input v-model="lengde" type="number" min="1" maxlength="2" max="99" step="1"> meter
                 div.col 
                   div <strong>Forbruker</strong>
                     div
                       label Strøm (I)
-                      <input v-model="strom"> A
-
+                      <input v-model="strom" type="number" min="1" maxlength="2" max="99" step="1"> A
               .formulas.clear-both
                 p formula
               .warning
