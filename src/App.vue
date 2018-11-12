@@ -113,53 +113,11 @@
 
 <style lang="scss" scoped>
   // Scoped CSS only for this component
-  // .lo_constrainedContainer {
-  //   display: flex;
-  //   align-items: center;
-
-  //   .middle {
-  //     width: 40%;
-  //   }
-  //   .left-right {
-  //     width: 30%;
-  //   }
-  // }
 
   @import './main';
 
-  // .container-fluid {
-  //   padding-top: 30px;
-  //   max-width: 1000px;
-  // }
-
-  // input {
-  //   width: 2em;
-  //   text-align: center;
-  // }
-
-  // .formula-wrapper {
-  //   display: flex;
-  //   & > div {
-  //     align-self: center;
-  //     // background-color: red;
-  //   }
-
-  //   .calculation {
-  //     padding-left: 10px;
-  //   }
-  //   .upper-calculation {
-  //     border-bottom: 2px solid $dark-grey;
-  //     padding-left: 5px;
-  //     padding-right: 5px;
-  //   }
-  // }
 
   div.controls {
-    // display: flex;
-    // .col {
-    //   float: left;
-    // }
-
     label {
       padding-right: 10px;
     }
