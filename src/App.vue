@@ -103,24 +103,9 @@
     },
     computed: {
       deltaU() {
-        // const tmpLengde = this.stringToNum(this.lengde);
-        // const tmpStrom = this.stringToNum(this.strom);
-        // console.log(
-        //   'tmpLengde = ' +
-        //     tmpLengde +
-        //     ', tmpStrom = ' +
-        //     tmpStrom +
-        //     ', resistivitet = ' +
-        //     this.selectedResistivitet +
-        //     ', tversnitt = ' +
-        //     this.selectedTversnitt,
-        // );
         if (this.lengde > 0 && this.strom > 0) {
           const tmpDeltaU = (this.selectedResistivitet * 2 * this.lengde * this.strom / this.selectedTversnitt).toFixed(3);
-          console.log('tmpDeltaU = ' + tmpDeltaU);
-          console.log('tmpDeltaU type = ' + typeof tmpDeltaU);
           return tmpDeltaU;
-          // return (this.selectedResistivitet * 2 * tmpLengde * tmpStrom / this.selectedTversnitt).toFixed(3);
         }
         return '0';
       },
