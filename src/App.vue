@@ -151,8 +151,18 @@
     // display: block;
     // width: 15.75rem;
     // padding: 1.49219rem;
-    margin-bottom: 10px;
     margin-top: 2px;
+    margin-bottom: 0;
+    background-color: $white;
+    box-sizing: content-box;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-indent: 2px;
+    border-radius: 0;
+
+    @include breakpoint($large) {
+      margin-bottom: 10px;
+    }
   }
 
   div.controls {
@@ -166,7 +176,7 @@
     }
     select,
     input {
-      width: 5.5rem;
+      width: 5.2rem;
     }
 
     input {
