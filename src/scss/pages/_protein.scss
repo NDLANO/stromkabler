@@ -811,8 +811,12 @@ table svg {
   left: 4px;
 }
 
-// iView UI InputNumber
+/**
+ * iView UI InputNumber 
+ * This has to be in global CSS because the componet adds HTML
+ */
 .ivu-input-number-input {
-  width: 5.5rem;
+  width: 5.2rem;
   text-align: right;
+  padding-right: 10px;
 }
