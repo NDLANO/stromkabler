@@ -36,7 +36,7 @@
                       td
                         label Lengde (l)
                       td
-                        <InputNumber class="float-l mr-5" v-model="lengde" type="number" min="1" maxlength="2" max="99" step="1"/> 
+                        <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/> 
                         div.float-l meter
                   //- div <strong>Kabel</strong>
                     .clearfix
@@ -57,7 +57,7 @@
                   div.m-center <strong>Forbruker</strong>
                     div
                       label.float-l Strøm (I)
-                      <InputNumber class="float-l mr-5" v-model="strom" dir="rtl" type="number" min="1" maxlength="2" max="99" step="1"/>
+                      <InputNumber class="float-l mr-5" v-model="strom" :min="1" :max="99"/>
                       .float-l A
               .formulas.clear-both
                 p formula
