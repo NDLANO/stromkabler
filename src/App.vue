@@ -140,6 +140,13 @@
 
   @import './main';
 
+  .m-center {
+    @include breakpoint($large) {
+      width: 60%;
+      margin: auto;
+    }
+  }
+
   select {
     // display: block;
     // width: 15.75rem;
