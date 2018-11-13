@@ -56,10 +56,10 @@
                 div.col 
                   div.m-center <strong>Forbruker</strong>
                     div
-                      label.float-l Strøm (I)
-                      <InputNumber class="float-l mr-5" v-model="strom" :min="1" :max="99"/>
-                      .float-l A
-              .formulas.clear-both
+                      label Strøm (I)
+                      <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
+                      div.inline-block A
+              .formulas
                 p formula
               .warning
                 p warning
@@ -119,6 +119,9 @@
   };
 </script>
 
+<style lang="scss">
+  @import 'main.scss';
+</style>
 
 <style lang="scss" scoped>
   // Scoped CSS only for this component
@@ -130,6 +133,9 @@
       width: 60%;
       margin: auto;
     }
+  }
+  .inline-block {
+    display: inline-block;
   }
 
   select {
@@ -158,15 +164,7 @@
     select {
       font-size: 15px;
       // padding-right: 10px;
-    }
-    select,
-    input {
       width: 5.2rem;
-    }
-
-    input {
-      // width: 3.5rem;
-      text-align: center;
     }
 
     @include breakpoint($large) {
@@ -177,6 +175,7 @@
     & > .col {
       width: 100%;
       height: 100%;
+      padding-bottom: 15px;
 
       @include breakpoint($large) {
         &:nth-child(1) {
@@ -210,6 +209,3 @@
   // }
 </style>
 
-<style lang="scss">
-  @import 'main.scss';
-</style>
