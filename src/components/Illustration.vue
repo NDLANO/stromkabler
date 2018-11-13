@@ -15,7 +15,7 @@
         type: String,
       },
       length: {
-        type: String,
+        type: Number,
       },
     },
     computed: {

@@ -79,8 +79,8 @@
         tversnittValues: [1, 1.5, 2, 2.5, 4, 6],
         selectedResistivitet: 0.0178,
 
-        lengde: '1',
-        strom: '1',
+        lengde: 1,
+        strom: 1,
         selectedSpenning: 230,
         dummyVariable: 'dummy',
       };
