@@ -80,9 +80,28 @@ main {
   }
 }
 
-.formula-left {
-  margin-right: 30px;
+p.warning {
+  background-color: #f9e7e5; // #f0f7fb;
+  // background-image: url(@/assets/css-box-icon-4.png);
+  // background-position: 9px 0px;
+  // background-repeat: no-repeat;
+  border-left: solid 4px #d16d63; // #3498db;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 20px;
+
+  @include breakpoint($medium) {
+    padding: 15px 40px;
+  }
+
+  @include breakpoint($large) {
+    padding: 15px 60px;
+  }
 }
+
+// .formula-left {
+//   margin-right: 30px;
+// }
 
 .lo_constrainedContainer {
   max-width: 52rem;

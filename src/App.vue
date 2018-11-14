@@ -117,7 +117,7 @@
                     // TODO: This text should be styled like a warning box
                     p {{ $t('general.warning') }}                
               .warning.clearfix
-                p warning
+                p.warning NB! Pass på at strømkabelen har tilstrekkelig tversnitt i forhold til strømkilden. For lite tversnitt kan føre til varmgang og i verste fall brann.
 
     </div>
 </template>
