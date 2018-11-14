@@ -64,17 +64,31 @@
                 .delta-u
                   div <strong>Utregning &Delta;U:</strong>
                   .formula-wrapper
-                    .value-sign <span style="padding-right: 8px">&Delta;U = </span>
+                    div &Delta;U
+                    .equal =
                     div
                       .calculation
                         div.upper-calculation &rho; x 2 x l x I
                         .ta-center A 
-                    div = ({{ selectedResistivitet }} x 2 x {{ lengde }} x {{ strom }})/2,5 = 
+                    .equal =
+                    div ({{ selectedResistivitet }} x 2 x {{ lengde }} x {{ strom }})/2,5
+                    .equal = 
                     div <strong>{{ deltaU }}</strong>
                 .u2
                   div <strong>Utregning U<sub>2</sub>:</strong>
                   .formula-wrapper
-                    div U<sub>2</sub> = U<sub>1</sub> - &Delta;U = {{ selectedSpenning }} - {{ deltaU }} = <strong>{{ u2 }}</strong>
+                    div U<sub>2</sub>  
+                    .equal =
+                    div U<sub>1</sub> - &Delta;U 
+                    .equal =
+                    div {{ selectedSpenning }} - {{ deltaU }} 
+                    .equal =
+                    div <strong>{{ u2 }}</strong>
+                    // hack
+                    div.visibility-hidden
+                      .calculation
+                        div _
+                        div _
 
               //- .formulas.flex
                 //- p formula

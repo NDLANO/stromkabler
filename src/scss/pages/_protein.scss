@@ -40,36 +40,30 @@ main {
   display: grid;
 }
 
-// .formulas {
-//   display: flex;
-//   //   // justify-content: stretch;
-//   flex-wrap: wrap;
-//   //   align-content: center;
+.formulas {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid grey;
+  border-radius: 10px;
 
-//   //   & > div:nth-child(1) {
-//   //     margin-right: 30px;
-//   //   }
+  padding: 20px;
 
-//   //   .calulation {
-//   //     // width: 100%;
-//   //   }
-// }
-
+  & > div {
+    margin-bottom: 20px;
+  }
+  & > div:nth-child(1) {
+    margin-right: 5%;
+  }
+}
 .formula-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 
-  & > div:nth-child(3) {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-  & > div:nth-child(4) {
-    padding-left: 8px;
-  }
-
-  .value-sign {
-    // min-width: 50px;
+  .equal {
+    $equal-margin: 10px;
+    margin-left: $equal-margin;
+    margin-right: $equal-margin;
   }
 
   .upper-calculation {
