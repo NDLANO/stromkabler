@@ -40,23 +40,44 @@ main {
   display: grid;
 }
 
-.formulas {
-  display: flex;
-  //   // justify-content: stretch;
-  flex-wrap: wrap;
-  //   align-content: center;
+// .formulas {
+//   display: flex;
+//   //   // justify-content: stretch;
+//   flex-wrap: wrap;
+//   //   align-content: center;
 
-  //   & > div:nth-child(1) {
-  //     margin-right: 30px;
-  //   }
+//   //   & > div:nth-child(1) {
+//   //     margin-right: 30px;
+//   //   }
 
-  //   .calulation {
-  //     // width: 100%;
-  //   }
-}
+//   //   .calulation {
+//   //     // width: 100%;
+//   //   }
+// }
 
 .formula-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+
+  & > div:nth-child(3) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  & > div:nth-child(4) {
+    padding-left: 8px;
+  }
+
+  .value-sign {
+    // min-width: 50px;
+  }
+
+  .upper-calculation {
+    border-bottom: 1px solid grey;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 90px;
+  }
 }
 
 .formula-left {

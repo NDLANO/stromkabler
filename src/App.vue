@@ -59,7 +59,24 @@
                       label Strøm (I)
                       <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
                       div.inline-block A
-              .formulas.flex
+
+              .formulas
+                .delta-u
+                  div <strong>Utregning &Delta;U:</strong>
+                  .formula-wrapper
+                    .value-sign <span style="padding-right: 8px">&Delta;U = </span>
+                    div
+                      .calculation
+                        div.upper-calculation &rho; x 2 x l x I
+                        .ta-center A 
+                    div = ({{ selectedResistivitet }} x 2 x {{ lengde }} x {{ strom }})/2,5 = 
+                    div <strong>{{ deltaU }}</strong>
+                .u2
+                  div <strong>Utregning U<sub>2</sub>:</strong>
+                  .formula-wrapper
+                    div U<sub>2</sub> = U<sub>1</sub> - &Delta;U = {{ selectedSpenning }} - {{ deltaU }} = <strong>{{ u2 }}</strong>
+
+              //- .formulas.flex
                 //- p formula
                 .formula-wrapper.flex
                   .formula-left.flex
