@@ -37,6 +37,30 @@ main {
 
 .content-wrapper-inner {
   margin: 0 30px;
+  display: grid;
+}
+
+.formulas {
+  display: flex;
+  //   // justify-content: stretch;
+  flex-wrap: wrap;
+  //   align-content: center;
+
+  //   & > div:nth-child(1) {
+  //     margin-right: 30px;
+  //   }
+
+  //   .calulation {
+  //     // width: 100%;
+  //   }
+}
+
+.formula-wrapper {
+  align-items: center;
+}
+
+.formula-left {
+  margin-right: 30px;
 }
 
 .lo_constrainedContainer {

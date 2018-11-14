@@ -59,9 +59,47 @@
                       label Strøm (I)
                       <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
                       div.inline-block A
-              .formulas
-                p formula
-              .warning
+              .formulas.flex
+                //- p formula
+                .formula-wrapper.flex
+                  .formula-left.flex
+                    div <span style="padding-right: 10px">&Delta;U</span>= 
+                    div
+                      .calculation
+                        div.upper-calculation &rho; x 2 x l x I
+                        .ta-center A
+                  .formula-right                  
+                    p <strong>Utregning &Delta;U:</strong> <br>{{ deltaU }} = ({{ selectedResistivitet }} x 2 x {{ lengde }} x {{ strom }})/2,5   
+                .formula-wrapper.flex
+                  .formula-left
+                    div U<sub>2</sub> = U<sub>1</sub> - &Delta;U
+                  .formula-right
+                    div
+                      p <strong>Utregning U<sub>2</sub>:</strong> <br>{{ u2 }} = {{ selectedSpenning }} - {{ deltaU }}
+                //- .row
+                  .col-12
+                    .formula-wrapper
+                      .float-l <span style="padding-right: 10px">&Delta;U</span>= 
+                      .float-l 
+                        .calculation
+                          div.upper-calculation &rho; x 2 x l x I
+                          .ta-center A
+                      .float-l.ml-30
+                        .row
+                          .col
+                            p <strong>Utregning &Delta;U:</strong> <br>{{ deltaU }} = ({{ selectedResistivitet }}) x 2 x {{ lengde }} x {{ strom }})/2,5
+                  .col-12
+                    .formula-wrapper
+                      .float-l U<sub>2</sub> = U<sub>1</sub> - &Delta;U
+                      .float-l.ml-30
+                        .row
+                          .col
+                            p <strong>Utregning U<sub>2</sub>:</strong> <br>{{ u2 }} = {{ selectedSpenning }} - {{ deltaU }}
+                //- .row
+                  .col
+                    // TODO: This text should be styled like a warning box
+                    p {{ $t('general.warning') }}                
+              .warning.clearfix
                 p warning
 
     </div>
@@ -169,12 +207,12 @@
 
     @include breakpoint($large) {
       display: flex;
-      align-items: stretch;
+      // align-items: stretch;
     }
 
     & > .col {
       width: 100%;
-      height: 100%;
+      // height: 100%;
       padding-bottom: 15px;
 
       @include breakpoint($large) {
