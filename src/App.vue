@@ -38,21 +38,6 @@
                       td
                         <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/> 
                         div.float-l meter
-                  //- div <strong>Kabel</strong>
-                    .clearfix
-                      label.float-l Ledertverrsnitt (A)
-                      select.float-l(v-model="selectedTversnitt")
-                        option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
-                      div.float-l.pl-5 mm<sup>2</sup>
-                    .clearfix
-                      label.float-l Resesistivitet (&rho;)
-                      select.float-l(v-model="selectedResistivitet")
-                        option(value="0.0178") Cu 0,0178
-                        option(value="0.0264") Al 0,0264
-                      div.float-l.pl-5 &Omega;mm<sup>2</sup>/m
-                    .clearfix
-                      label Lengde (l)
-                      <input v-model="lengde" type="number" min="1" maxlength="2" max="99" step="1"> meter
                 div.col 
                   div.m-center <strong>Forbruker</strong>
                     div
