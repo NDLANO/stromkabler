@@ -5,7 +5,7 @@
         main
           .content-wrapper
             .content-wrapper-inner
-              Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde")
+              Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde" :tversnitt="selectedTversnitt")
               .controls
                 div.col 
                   div.m-center <strong>Strømkilde</strong>

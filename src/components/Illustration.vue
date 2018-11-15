@@ -17,13 +17,16 @@
       length: {
         type: Number,
       },
+      tversnitt: {
+        type: Number,
+      },
     },
     computed: {
       validatedLength() {
         if (this.length === '') return '0';
 
         return this.length;
-      },
+      },      
     },
   };
 </script>
