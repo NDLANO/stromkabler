@@ -8,25 +8,25 @@
               Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde" :tversnitt="selectedTversnitt")
               .controls
                 div.col 
-                  div.m-center <strong>Strømkilde</strong>
+                  div.m-center <strong>{{ $t("general.powersource") }}</strong>
                     div
                       label U<sub>1</sub>
                       select(v-model="selectedSpenning" dir="rtl")
                         option(value="230") 230V
                         option(value="400") 400v
                 div.col
-                  div <strong>Kabel</strong>
+                  div <strong>{{ $t("general.cable") }}</strong>
                   table
                     tr
                       td 
-                        label.float-l Ledertverrsnitt (A)
+                        label.float-l {{ $t("general.crossSection") }} (A)
                       td
                         select.float-l(v-model="selectedTversnitt" dir="rtl")
                           option(v-for="value in tversnittValues" :value="value") {{ numToString(value) }}
                         div.float-l.pl-5 mm<sup>2</sup>
                     tr
                       td
-                        label.float-l Resesistivitet (&rho;)
+                        label.float-l {{ $t("general.resistivity") }} (&rho;)
                       td
                         select.float-l(v-model="selectedResistivitet" dir="rtl")
                           option(value="0.0178") Cu 0,0178
@@ -34,20 +34,20 @@
                         div.float-l.pl-5 &Omega;mm<sup>2</sup>/m
                     tr
                       td
-                        label Lengde (l)
+                        label {{ $t("general.length") }} (l)
                       td
                         <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/> 
                         div.float-l meter
                 div.col 
-                  div.m-center <strong>Forbruker</strong>
+                  div.m-center <strong>{{ $t("general.consumer") }}</strong>
                     div
-                      label Strøm (I)
+                      label {{ $t("general.current")}} (I)
                       <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
                       div.inline-block A
 
               .formulas
                 .delta-u
-                  div <strong>Utregning &Delta;U:</strong>
+                  div <strong>{{ $t("general.calculation") }} &Delta;U:</strong>
                   .formula-wrapper
                     div &Delta;U
                     .equal =
@@ -60,7 +60,7 @@
                     .equal = 
                     div <strong>{{ deltaU }}</strong>
                 .u2
-                  div <strong>Utregning U<sub>2</sub>:</strong>
+                  div <strong>{{ $t("general.calculation") }} U<sub>2</sub>:</strong>
                   .formula-wrapper
                     div U<sub>2</sub>  
                     .equal =
@@ -76,7 +76,7 @@
                         div _
 
               .warning.clearfix
-                p.warning NB! Pass på at strømkabelen har tilstrekkelig tversnitt i forhold til strømkilden. For lite tversnitt kan føre til varmgang og i verste fall brann.
+                p.warning {{ $t("general.warning") }}
 
     </div>
 </template>
