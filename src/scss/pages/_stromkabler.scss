@@ -728,69 +728,6 @@ h1.test-alternative-heading {
   font-weight: 600;
 }
 
-/// TABLES
-
-// .lo_tableBlock {
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-// }
-
-// .tableBlock:first-of-type {
-//   margin-bottom: $base-line-height/2;
-//   @include breakpoint($medium) {
-//     margin-right: $base-line-height * 1;
-//   }
-//   @include breakpoint($xxlarge) {
-//     margin-right: $base-line-height * 1.5;
-//   }
-// }
-
-// table {
-//   table-layout: fixed;
-//   white-space: nowrap;
-//   width: 100%;
-//   background: white;
-//   border-radius: $base-line-height/4;
-//   box-shadow: $shadow-z1;
-// }
-
-// td:first-child,
-// thead th {
-//   font-weight: bold;
-// }
-
-// thead th {
-//   border-bottom: 3px solid $blueChart;
-// }
-
-// table tr:nth-child(2n) td {
-//   background: $lightBlue;
-// }
-
-// td,
-// th {
-//   text-align: center;
-//   font-weight: normal;
-//   @include breakpoint($medium) {
-//     padding: $base-line-height/8 $base-line-height/10;
-//   }
-//   @include breakpoint($xxlarge) {
-//     padding: $base-line-height/2.5 $base-line-height/4;
-//   }
-// }
-
-// thead {
-//   text-transform: uppercase;
-//   line-height: $base-line-height;
-// }
-
-// .table_cellContent {
-//   justify-content: center;
-//   align-items: center;
-//   display: flex;
-// }
-
 .correctAnswer,
 .wrongAnswer {
   width: 3rem;
