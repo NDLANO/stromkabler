@@ -14,6 +14,7 @@
     "build": "node build/build.js",
     "build_nb": "node build/build_nb.js",
     "build_nn": "node build/build_nn.js",
+    "dep_nb": "node deploy_dev_nb",
     "build_dep_nb": "node build/build_nb.js && node deploy_dev_nb",
     "build_dep_nn": "node build/build_nn.js && node deploy_dev_nn"
   },
@@ -62,6 +63,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "ftp-deploy": "^2.1.4",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
