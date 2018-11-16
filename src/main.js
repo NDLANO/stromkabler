@@ -4,7 +4,6 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import Svgxuse from 'svgxuse'; // A simple polyfill that fetches external SVGs referenced in <use> elements when the browser itself fails to do so.
-import { InputNumber } from 'iview';
 // import { Checkbox, CheckboxGroup, Step, Steps, InputNumber } from 'element-ui';
 import VueSVGCustomIcon from 'vue-svg-custom-icon'; // A lightweight component with no dependecy to allow use of custom SVG icons in your Vue.js application based on SVG sprite.
 import App from './App';
@@ -12,8 +11,6 @@ import App from './App';
 // import store from './store/store';
 
 Vue.config.productionTip = false;
-
-Vue.component('InputNumber', InputNumber);
 
 Vue.use(VueI18n);
 // Vue.use(VueChartkick, { adapter: Highcharts });
