@@ -135,7 +135,7 @@
         return '0';
       },
       u2() {
-        return this.selectedSpenning - this.deltaU;
+        return (this.selectedSpenning - this.deltaU).toFixed(3);
       },
       numberLengde() {
         return parseInt(this.lengde, 10);
