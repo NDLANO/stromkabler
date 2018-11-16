@@ -5,7 +5,7 @@
         main
           .content-wrapper
             .content-wrapper-inner
-              Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="lengde" :tversnitt="selectedTversnitt")
+              Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="numberLengde" :tversnitt="selectedTversnitt")
               .controls
                 div.col 
                   div.m-center <strong>{{ $t("general.powersource") }}</strong>
@@ -36,13 +36,16 @@
                       td
                         label {{ $t("general.length") }} (l)
                       td
-                        <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/> 
+                        //- input(type="number" class="float-l mr-5" v-model="lengde" @input="onInputLengdeChanged")
+                        InputNumber(class="float-l mr-5" v-model="lengde" :max="99")
+                        //- <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/> 
                         div.float-l meter
                 div.col 
                   div.m-center <strong>{{ $t("general.consumer") }}</strong>
                     div
                       label {{ $t("general.current")}} (I)
-                      <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
+                      InputNumber(class="mr-5 inline-block" v-model="strom" :max="99")
+                      //- <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
                       div.inline-block A
 
               .formulas
@@ -84,6 +87,7 @@
 <script>
   import Header from './components/Header';
   import Illustration from './components/Illustration';
+  import InputNumber from './components/InputNumber';
 
   export default {
     name: 'App',
@@ -93,8 +97,8 @@
         tversnittValues: [1, 1.5, 2, 2.5, 4, 6],
         selectedResistivitet: 0.0178,
 
-        lengde: 1,
-        strom: 1,
+        lengde: '1',
+        strom: '1',
         selectedSpenning: 230,
         dummyVariable: 'dummy',
       };
@@ -102,6 +106,7 @@
     components: {
       Header,
       Illustration,
+      InputNumber,
     },
     methods: {
       stringToNum(stringIn) {
@@ -117,8 +122,14 @@
     },
     computed: {
       deltaU() {
-        if (this.lengde > 0 && this.strom > 0) {
-          const tmpDeltaU = (this.selectedResistivitet * 2 * this.lengde * this.strom / this.selectedTversnitt).toFixed(3);
+        if (this.numberLengde > 0 && this.numberStrom > 0) {
+          const tmpDeltaU = (
+            this.selectedResistivitet *
+            2 *
+            this.numberLengde *
+            this.numberStrom /
+            this.selectedTversnitt
+          ).toFixed(3);
           return tmpDeltaU;
         }
         return '0';
@@ -126,9 +137,17 @@
       u2() {
         return this.selectedSpenning - this.deltaU;
       },
+      numberLengde() {
+        return parseInt(this.lengde, 10);
+      },
+      numberStrom() {
+        return parseInt(this.strom, 10);
+      },
     },
     watch: {},
-    created() {},
+    created() {
+      console.clear();
+    },
     mounted() {},
   };
 </script>
