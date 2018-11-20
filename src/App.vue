@@ -5,7 +5,7 @@
         main
           .content-wrapper
             .content-wrapper-inner
-              Illustration(:u1="selectedSpenning" :u2="u2" :deltaU="deltaU" :length="numberLengde" :tversnitt="selectedTversnitt")
+              Illustration(:u1="numberSpenning" :u2="u2" :deltaU="deltaU" :length="numberLengde" :tversnitt="selectedTversnitt")
               .controls
                 div.col 
                   div.m-center <strong>{{ $t("general.powersource") }}</strong>
@@ -135,13 +135,16 @@
         return '0';
       },
       u2() {
-        return (this.selectedSpenning - this.deltaU).toFixed(3);
+        return parseFloat((this.selectedSpenning - this.deltaU).toFixed(3));
       },
       numberLengde() {
         return parseInt(this.lengde, 10);
       },
       numberStrom() {
         return parseInt(this.strom, 10);
+      },
+      numberSpenning() {
+        return parseInt(this.selectedSpenning, 10);
       },
     },
     watch: {},
@@ -229,7 +232,7 @@
   }
 
   td {
-    vertical-align: bottom;
+    vertical-align: top;
   }
   // .sikringsskap {
   //   float: left;
