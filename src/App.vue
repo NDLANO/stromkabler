@@ -37,14 +37,14 @@
                         label {{ $t("general.length") }} (l)
                       td
                         //- input(type="number" class="float-l mr-5" v-model="lengde" @input="onInputLengdeChanged")
-                        InputNumber(class="float-l mr-5" v-model="lengde" :max="99")
+                        InputNumber(class="float-l mr-5" v-model="lengde" :min="0" :max="99")
                         //- <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/> 
                         div.float-l meter
                 div.col 
                   div.m-center <strong>{{ $t("general.consumer") }}</strong>
                     div
                       label {{ $t("general.current")}} (I)
-                      InputNumber(class="mr-5 inline-block" v-model="strom" :max="99")
+                      InputNumber(class="mr-5 inline-block" v-model="strom" :min="0" :max="99")
                       //- <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
                       div.inline-block A
 

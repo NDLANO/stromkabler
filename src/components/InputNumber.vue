@@ -28,10 +28,10 @@
         let tmpNumber = parseInt(evt.target.value, 10);
         if (isNaN(tmpNumber)) tmpNumber = 0;
 
-        if (this.min) {
+        if (this.min !== undefined) {
           if (tmpNumber < this.min) tmpNumber = this.min;
         }
-        if (this.max) {
+        if (this.max !== undefined) {
           if (tmpNumber > this.max) tmpNumber = this.max;
         }
 
