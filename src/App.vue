@@ -1,7 +1,7 @@
 <template lang="pug">
     <div ref="app" id="app">
       .lo_mainContainer
-        Header
+        //- Header
         main
           .content-wrapper
             .content-wrapper-inner
@@ -123,13 +123,7 @@
     computed: {
       deltaU() {
         if (this.numberLengde > 0 && this.numberStrom > 0) {
-          const tmpDeltaU = (
-            this.selectedResistivitet *
-            2 *
-            this.numberLengde *
-            this.numberStrom /
-            this.selectedTversnitt
-          ).toFixed(3);
+          const tmpDeltaU = (this.selectedResistivitet * 2 * this.numberLengde * this.numberStrom / this.selectedTversnitt).toFixed(3);
           return tmpDeltaU;
         }
         return '0';
