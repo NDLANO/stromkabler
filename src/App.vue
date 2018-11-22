@@ -13,7 +13,7 @@
                       label U<sub>1</sub>
                       select(v-model="selectedSpenning" dir="rtl")
                         option(value="230") 230V
-                        option(value="400") 400v
+                        option(value="400") 400V
                 div.col
                   div <strong>{{ $t("general.cable") }}</strong>
                   table
