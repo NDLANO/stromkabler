@@ -11,6 +11,7 @@
     calculation: 'Utregning',
     warning:
       'Pass på at kabelen er tilstrekkelig dimensjonert! En for tynn leder vil resultere i varmgang og fare for brann.',
+    meter: 'meter',
   },
   illustrasjon: {
     sikringsskap: 'Sikringsskap',
