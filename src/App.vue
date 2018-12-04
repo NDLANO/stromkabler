@@ -123,7 +123,13 @@
     computed: {
       deltaU() {
         if (this.numberLengde > 0 && this.numberStrom > 0) {
-          const tmpDeltaU = (this.selectedResistivitet * 2 * this.numberLengde * this.numberStrom / this.selectedTversnitt).toFixed(3);
+          const tmpDeltaU = (
+            (this.selectedResistivitet *
+              2 *
+              this.numberLengde *
+              this.numberStrom) /
+            this.selectedTversnitt
+          ).toFixed(3);
           return tmpDeltaU;
         }
         return '0';
@@ -228,6 +234,7 @@
   td {
     vertical-align: top;
   }
+
   // .sikringsskap {
   //   float: left;
   //   text-align: center;
