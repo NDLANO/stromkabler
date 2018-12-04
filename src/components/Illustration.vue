@@ -26,7 +26,7 @@
         if (this.length === '') return '0';
 
         return this.length;
-      },      
+      },
     },
   };
 </script>
@@ -42,6 +42,10 @@
     .sub {
       font-size: 65px;
     }
+  }
+
+  .ill-text {
+    user-select: all;
   }
 
   // .ill-text-length {
