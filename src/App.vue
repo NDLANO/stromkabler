@@ -7,7 +7,7 @@
             .content-wrapper-inner
               Illustration(:u1="numberSpenning" :u2="u2" :deltaU="deltaU" :length="numberLengde" :tversnitt="selectedTversnitt")
               .controls
-                div.col 
+                div.col
                   div.m-center <strong>{{ $t("general.powersource") }}</strong>
                     div
                       label U<sub>1</sub>
@@ -18,7 +18,7 @@
                   div <strong>{{ $t("general.cable") }}</strong>
                   table
                     tr
-                      td 
+                      td
                         label.float-l {{ $t("general.crossSection") }} (A)
                       td
                         select.float-l(v-model="selectedTversnitt" dir="rtl")
@@ -38,9 +38,9 @@
                       td
                         //- input(type="number" class="float-l mr-5" v-model="lengde" @input="onInputLengdeChanged")
                         InputNumber(class="float-l mr-5" v-model="lengde" :min="0" :max="99")
-                        //- <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/> 
+                        //- <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/>
                         div.float-l meter
-                div.col 
+                div.col
                   div.m-center <strong>{{ $t("general.consumer") }}</strong>
                     div
                       label {{ $t("general.current")}} (I)
@@ -57,7 +57,7 @@
                     div
                       .calculation
                         div.upper-calculation &rho; x 2 x l x I
-                        .ta-center A 
+                        .ta-center A
                     .equal =
                     div ({{ selectedResistivitet }} x 2 x {{ lengde }} x {{ strom }})/{{ selectedTversnitt }}
                     .equal =
@@ -65,11 +65,11 @@
                 .u2
                   div <strong>{{ $t("general.calculation") }} U<sub>2</sub>:</strong>
                   .formula-wrapper
-                    div U<sub>2</sub>  
+                    div U<sub>2</sub>
                     .equal =
-                    div U<sub>1</sub> - &Delta;U 
+                    div U<sub>1</sub> - &Delta;U
                     .equal =
-                    div {{ selectedSpenning }} - {{ deltaU }} 
+                    div {{ selectedSpenning }} - {{ deltaU }}
                     .equal =
                     div <strong>{{ u2 }}</strong>
                     // hack
