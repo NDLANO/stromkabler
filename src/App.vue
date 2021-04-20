@@ -59,8 +59,8 @@
                         div.upper-calculation &rho; x 2 x l x I
                         .ta-center A 
                     .equal =
-                    div ({{ selectedResistivitet }} x 2 x {{ lengde }} x {{ strom }})/2,5
-                    .equal = 
+                    div ({{ selectedResistivitet }} x 2 x {{ lengde }} x {{ strom }})/{{ selectedTversnitt }}
+                    .equal =
                     div <strong>{{ deltaU }}</strong>
                 .u2
                   div <strong>{{ $t("general.calculation") }} U<sub>2</sub>:</strong>
