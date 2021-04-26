@@ -14,9 +14,6 @@
     "build": "node build/build.js",
     "build_nb": "node build/build_nb.js",
     "build_nn": "node build/build_nn.js",
-    "dep_nb": "node deploy_dev_nb",
-    "build_dep_nb": "node build/build_nb.js && node deploy_dev_nb",
-    "build_dep_nn": "node build/build_nn.js && node deploy_dev_nn"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
