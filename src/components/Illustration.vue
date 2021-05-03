@@ -48,8 +48,5 @@
     user-select: all;
   }
 
-  // .ill-text-length {
-  //   font-size: 150px;
-  // }
 </style>
 

@@ -36,16 +36,13 @@
                       td
                         label {{ $t("general.length") }} (l)
                       td
-                        //- input(type="number" class="float-l mr-5" v-model="lengde" @input="onInputLengdeChanged")
                         InputNumber(class="float-l mr-5" v-model="lengde" :min="0" :max="99")
-                        //- <InputNumber class="float-l mr-5" v-model="lengde" :min="1" :max="99"/>
                         div.float-l meter
                 div.col
                   div.m-center <strong>{{ $t("general.consumer") }}</strong>
                     div
                       label {{ $t("general.current")}} (I)
                       InputNumber(class="mr-5 inline-block" v-model="strom" :min="0" :max="99")
-                      //- <InputNumber class="mr-5 inline-block" v-model="strom" :min="1" :max="99"/>
                       div.inline-block A
 
               .formulas
@@ -175,9 +172,6 @@
   }
 
   select {
-    // display: block;
-    // width: 15.75rem;
-    // padding: 1.49219rem;
     margin-top: 2px;
     margin-bottom: 0;
     background-color: $white;
@@ -199,33 +193,26 @@
 
     select {
       font-size: 15px;
-      // padding-right: 10px;
       width: 5.2rem;
     }
 
     @include breakpoint($large) {
       display: flex;
-      // align-items: stretch;
     }
 
     & > .col {
       width: 100%;
-      // height: 100%;
       padding-bottom: 15px;
 
       @include breakpoint($large) {
         &:nth-child(1) {
           width: 27%;
-          // background-color: #f00;
         }
         &:nth-child(2) {
           width: 35%;
-          // background-color: #0f0;
         }
         &:nth-child(3) {
-          // (style="width: 33.8%; background-color: green;")
           width: 35.1%;
-          // background-color: #00f;
         }
       }
     }
@@ -235,14 +222,5 @@
     vertical-align: top;
   }
 
-  // .sikringsskap {
-  //   float: left;
-  //   text-align: center;
-  // }
-
-  // .panelovn {
-  //   float: right;
-  //   text-align: center;
-  // }
 </style>
 

@@ -1,8 +1,6 @@
 <template lang="pug">
   header
-      //- button.btn-menu(@click="toggleMobileMenu")
-        <svg-icon name="icon-menu" size="32"></svg-icon>
-      h1.header_title {{ $t('general.heading')}}             
+      h1.header_title {{ $t('general.heading')}}
 </template>
 
 <script>
